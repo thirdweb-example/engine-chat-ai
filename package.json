@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@thirdweb-dev/engine": "^0.0.1",
-    "@thirdweb-dev/sdk": "^4.0.14",
+    "@thirdweb-dev/chains": "^0.1.62",
+    "@thirdweb-dev/engine": "^0.0.4",
+    "@thirdweb-dev/react": "^4.1.17",
+    "@thirdweb-dev/sdk": "^4.0.23",
     "ai": "^2.2.24",
+    "ethers": "5",
     "next": "14.0.3",
     "openai": "^4.19.0",
     "react": "^18",
