@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { useChat } from "ai/react";
 import va from "@vercel/analytics";
 import clsx from "clsx";
-import { ThirdwebIcon, GithubIcon, LoadingCircle, SendIcon } from "./icons";
+import { GithubIcon, LoadingCircle, SendIcon } from "./icons";
 import { Bot, User } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -42,13 +42,6 @@ const Chat: React.FC = () =>  {
   return (
     <main className="flex flex-col items-center justify-between pb-40">
       <div className="absolute top-5 hidden w-full justify-between px-5 sm:flex">
-        <a
-          href="https://thirdweb.com"
-          target="_blank"
-          className="rounded-lg p-2 transition-colors duration-200 hover:bg-stone-100 sm:bottom-auto"
-        >
-          <ThirdwebIcon />
-        </a>
         <a
           href="https://github.com/eabdelmoneim/chat-ai-thirdweb-engine"
           target="_blank"
