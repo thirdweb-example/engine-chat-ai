@@ -12,13 +12,14 @@ const openai = new OpenAI({
   // IMPORTANT! Set the runtime to edge
   export const runtime = 'edge';
    
-  export async function POST(req: Request) {
+const handler = async function POST(req: Request)  {
     // Extract the `messages` from the body of the request
-    const { messages } = await req.json();
+    const {messages} = await req.json();
+    console.log(messages);
    
     // Ask OpenAI for a streaming chat completion given the prompt
     const response = await openai.chat.completions.create({
-      model: 'gpt-3.5-turbo-0613',
+      model: 'gpt-3.5-turbo-1106',
       stream: true,
       messages,
     });
@@ -26,4 +27,6 @@ const openai = new OpenAI({
     const stream = OpenAIStream(response);
     // Respond with the stream
     return new StreamingTextResponse(stream);
-  }
+  };
+
+  export default handler;
