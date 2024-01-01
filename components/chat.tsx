@@ -10,16 +10,22 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Textarea from "react-textarea-autosize";
 import { toast } from "sonner";
+import { useAddress } from "@thirdweb-dev/react";
 
 const examples = [
-  "What are some ideas you might be interested in?",
+  "To start, what is your name?",
 ];
 
 const Chat: React.FC = () =>  {
   const formRef = useRef<HTMLFormElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+  const address = useAddress();
 
   const { messages, input, setInput, handleSubmit, isLoading } = useChat({
+    body: {
+      walletAddress: { address }
+    }, 
+    
     onResponse: (response) => {
       if (response.status === 429) {
         toast.error("You have reached your request limit for the day.");
@@ -91,7 +97,7 @@ const Chat: React.FC = () =>  {
         <div className="border-gray-200sm:mx-0 mx-5 mt-20 max-w-screen-md rounded-md border sm:w-full">
           <div className="flex flex-col space-y-4 p-7 sm:p-10">
             <h1 className="text-lg font-semiboldt">
-              LLM based Text Adventure Game that Mints Reward NFTs
+              An AI Based Game using Thirdweb Engine
             </h1>
             <p className="text-gray-500">
               This demo of an AI Agent uses{" "}
@@ -101,7 +107,7 @@ const Chat: React.FC = () =>  {
                 rel="noopener noreferrer"
                 className="font-medium underline underline-offset-4 transition-colors hover:text-black"
               >
-                Thirdweb{"'"}s Dev Tools
+                thirdweb{"'"}s Dev Tools
               </a>{" "}
               and{" "}
               <a
@@ -119,7 +125,7 @@ const Chat: React.FC = () =>  {
                 rel="noopener noreferrer"
                 className="font-medium underline underline-offset-4 transition-colors hover:text-black"
               >
-                Engine
+                thirdwebEngine
               </a>{" "}
   
             </p>
@@ -203,7 +209,7 @@ const Chat: React.FC = () =>  {
             className="transition-colors hover:text-black"
           >
             thirdweb Engine
-          </a>
+          </a>{" "}
           and{" "}
           <a
             href="https://platform.openai.com/docs/guides/gpt/function-calling"
