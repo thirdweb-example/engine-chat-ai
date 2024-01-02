@@ -146,7 +146,7 @@ const Chat: React.FC = () =>  {
           </div>
         </div>
       )}
-      <div className="fixed bottom-2 flex w-full flex-col items-center space-y-3 bg-gradient-to-b from-transparent via-gray-100 to-gray-100 p-0 sm:px-0">
+      <div className="fixed bottom-0 flex w-full flex-col items-center space-y-3 bg-gradient-to-b from-transparent via-gray-100 to-gray-100 p-0 sm:px-0">
         <form
           ref={formRef}
           onSubmit={handleSubmit}
