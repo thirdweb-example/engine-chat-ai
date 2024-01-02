@@ -32,7 +32,7 @@ const handler = async function POST(req: Request)  {
     At the beginning of the game you should check the player's keys balance.
     The first thing you will receive from the user is their name and when they give you their name you should welcome them and then describe the goal of the game and then describe the forest to them and then ask them what they want to do.
     If they ask you to check their keys balance, you should check their balance and tell them how many of each key they have.
-    at any time if they have all three keys you should congratulate them and tell them they have won the game.`,
+    at any time if they have all three keys you should congratulate them and tell them they have won the game and share this link with them https://sepolia.arbiscan.io/address/ and append the player's "wallet address#tokentxnsErc1155" to the end of the link telling them they can see the Key NFTs that were sent to them. `,
   };
   
   const combinedMessages = [context, ...messages];
