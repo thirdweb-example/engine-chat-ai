@@ -94,7 +94,7 @@ const Chat: React.FC = () =>  {
           </div>
         ))
       ) : (
-        <div className="border-gray-200sm:mx-0 mx-5 mt-20 max-w-screen-md rounded-md border sm:w-full">
+        <div className="border-gray-200sm:mx-0 mx-5 mt-20 max-w-screen-md rounded-md border sm:w-full overflow-y-scroll">
           <div className="flex flex-col space-y-4 p-7 sm:p-10">
             <h1 className="text-lg font-semiboldt">
               An AI Based Game using Thirdweb Engine
@@ -150,7 +150,7 @@ const Chat: React.FC = () =>  {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="relative w-full max-w-screen-md rounded-xl border border-gray-200 bg-white px-4 pb-2 pt-3 shadow-lg sm:pb-3 sm:pt-4 text-black"
+          className="relative w-full max-w-screen-md rounded-xl border border-gray-200 bg-white px-4 pb-2 pt-3 shadow-lg sm:pb-3 sm:pt-4 text-black text-small"
         >
           <Textarea
             ref={inputRef}
@@ -168,7 +168,7 @@ const Chat: React.FC = () =>  {
               }
             }}
             spellCheck={false}
-            className="w-full pr-10 focus:outline-none text-black"
+            className="w-full pr-10 focus:outline-none text-black text-small"
           />
           <button
             className={clsx(
