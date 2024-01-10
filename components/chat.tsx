@@ -49,7 +49,7 @@ const Chat: React.FC = () =>  {
     <main className="flex flex-col items-center">
       <div className="absolute top-5 hidden w-full justify-between px-5 sm:flex">
         <a
-          href="https://github.com/eabdelmoneim/chat-ai-thirdweb-engine"
+          href="https://github.com/thirdweb-example/chat-ai-thirdweb-engine"
           target="_blank"
           className="rounded-lg p-2 transition-colors duration-200 hover:bg-stone-100 sm:bottom-auto"
         >
@@ -220,7 +220,7 @@ const Chat: React.FC = () =>  {
             OpenAI Functions.
           </a>{" "}
           <a
-            href="https://github.com/eabdelmoneim/chat-ai-thirdweb-engine"
+            href="https://github.com/thirdweb-example/chat-ai-thirdweb-engine"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-colors hover:text-black"
