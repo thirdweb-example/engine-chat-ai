@@ -3,7 +3,7 @@ This is a ChatGPT generated text adventure game called **The Quest for the Three
 ## Components Used
 
 * [thirdweb Embedded Wallets](https://portal.thirdweb.com/embedded-wallet)
-* [thirdweb Engine](https://portal.thirdweb.com/engine)
+* [thirdweb Engine](https://portal.thirdweb.com/infrastructure/engine/overview)
 * [Vercel AI](https://vercel.com/ai)
 * [OpenAI Function Calling](https://platform.openai.com/docs/guides/function-calling)
 
